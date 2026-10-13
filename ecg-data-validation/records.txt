@@ -1,0 +1,11 @@
+# PTB record path            record_id
+# e.g. patient177/s0366lre   ptb177
+patient185/s0336lre   ptb185
+patient236/s0464_re   ptb236
+patient242/s0471_re   ptb242
+patient105/s0303lre   ptb105
+patient279/s0534_re   ptb279
+patient049/s0173lre   ptb049_s0173
+patient049/s0178lre   ptb049_s0178
+patient049/s0186lre   ptb049_s0186
+patient049/s0314lre   ptb049_s0314

@@ -1,0 +1,18 @@
+# PTB records — downloaded locally, never committed (PhysioNet)
+data/
+
+# SKA real-time engine work — proprietary, never committed
+ecg-ska-engine/
+
+# Runtime output
+logs/
+*.log
+
+# QuestDB console exports
+questdb-query-*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
