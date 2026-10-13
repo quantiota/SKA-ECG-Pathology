@@ -10,34 +10,106 @@ unchanged.
 The records come from the PhysioNet
 [PTB Diagnostic ECG Database](https://physionet.org/content/ptbdb/1.0.0/), lead II, 1000 Hz,
 the whole record (about 2 minutes). Cosine input, scale 25. One run per record: all its steps,
-five per beat.
+five per beat. Three cubes per record: the cube (P), the same with the steps
+into or out of a missing wave tagged (×), and the cube with Δt, the time since the previous
+wave, as the vertical axis.
 
 ## Healthy controls
 
-| age | record | cube |
-|---|---|---|
-| 22 | ptb185 | [`ska_ecg_ptb185_scale25_vr.html`](../vr/ska_ecg_ptb185_scale25_vr.html) |
-| 25 | ptb236 | [`ska_ecg_ptb236_scale25_vr.html`](../vr/ska_ecg_ptb236_scale25_vr.html) |
-| 28 | ptb242 | [`ska_ecg_ptb242_scale25_vr.html`](../vr/ska_ecg_ptb242_scale25_vr.html) |
-| 32 | ptb105 | [`ska_ecg_ptb105_scale25_vr.html`](../vr/ska_ecg_ptb105_scale25_vr.html) |
-| 35 | ptb279 | [`ska_ecg_ptb279_scale25_vr.html`](../vr/ska_ecg_ptb279_scale25_vr.html) |
+| age | record | scale | cube | missing waves tagged (×) | Δt |
+|---|---|---|---|---|---|
+| 22 | ptb185 | 25 | [open](../vr/ska_ecg_ptb185_scale25_vr.html) | [open](../vr/ska_ecg_ptb185_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb185_scale25_dt_vr.html) |
+| 25 | ptb236 | 25 | [open](../vr/ska_ecg_ptb236_scale25_vr.html) | [open](../vr/ska_ecg_ptb236_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb236_scale25_dt_vr.html) |
+| 28 | ptb242 | 25 | [open](../vr/ska_ecg_ptb242_scale25_vr.html) | [open](../vr/ska_ecg_ptb242_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb242_scale25_dt_vr.html) |
+| 32 | ptb105 | 25 | [open](../vr/ska_ecg_ptb105_scale25_vr.html) | [open](../vr/ska_ecg_ptb105_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb105_scale25_dt_vr.html) |
+| 35 | ptb279 | 25 | [open](../vr/ska_ecg_ptb279_scale25_vr.html) | [open](../vr/ska_ecg_ptb279_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb279_scale25_dt_vr.html) |
 
-## Myocardial infarction
+## Myocardial infarction, women
 
-One woman aged 42, acute inferior infarction, four records.
+| patient | age | infarction | when | record | cube | missing waves tagged (×) | Δt |
+|---|---|---|---|---|---|---|---|
+| 049 | 42 | inferior | day 0 | ptb049_s0173 | [open](../vr/ska_ecg_ptb049_s0173_scale25_vr.html) | [open](../vr/ska_ecg_ptb049_s0173_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb049_s0173_scale25_dt_vr.html) |
+| 049 | 42 | inferior | day 4 | ptb049_s0178 | [open](../vr/ska_ecg_ptb049_s0178_scale25_vr.html) | [open](../vr/ska_ecg_ptb049_s0178_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb049_s0178_scale25_dt_vr.html) |
+| 049 | 42 | inferior | day 11 | ptb049_s0186 | [open](../vr/ska_ecg_ptb049_s0186_scale25_vr.html) | [open](../vr/ska_ecg_ptb049_s0186_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb049_s0186_scale25_dt_vr.html) |
+| 049 | 42 | inferior | day 444 | ptb049_s0314 | [open](../vr/ska_ecg_ptb049_s0314_scale25_vr.html) | [open](../vr/ska_ecg_ptb049_s0314_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb049_s0314_scale25_dt_vr.html) |
+| 051 | 55 | antero-septal | day 0 | ptb051_s0179 | [open](../vr/ska_ecg_ptb051_s0179_scale25_vr.html) | [open](../vr/ska_ecg_ptb051_s0179_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb051_s0179_scale25_dt_vr.html) |
+| 051 | 55 | antero-septal | day 4 | ptb051_s0181 | [open](../vr/ska_ecg_ptb051_s0181_scale25_vr.html) | [open](../vr/ska_ecg_ptb051_s0181_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb051_s0181_scale25_dt_vr.html) |
+| 051 | 55 | antero-septal | day 10 | ptb051_s0187 | [open](../vr/ska_ecg_ptb051_s0187_scale25_vr.html) | [open](../vr/ska_ecg_ptb051_s0187_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb051_s0187_scale25_dt_vr.html) |
+| 051 | 55 | antero-septal | day 112 | ptb051_s0213 | [open](../vr/ska_ecg_ptb051_s0213_scale25_vr.html) | [open](../vr/ska_ecg_ptb051_s0213_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb051_s0213_scale25_dt_vr.html) |
+| 085 | 56 | posterior | day 0 | ptb085_s0296 | [open](../vr/ska_ecg_ptb085_s0296_scale25_vr.html) | [open](../vr/ska_ecg_ptb085_s0296_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb085_s0296_scale25_dt_vr.html) |
+| 085 | 56 | posterior | day 5 | ptb085_s0297 | [open](../vr/ska_ecg_ptb085_s0297_scale25_vr.html) | [open](../vr/ska_ecg_ptb085_s0297_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb085_s0297_scale25_dt_vr.html) |
+| 085 | 56 | posterior | day 11 | ptb085_s0298 | [open](../vr/ska_ecg_ptb085_s0298_scale25_vr.html) | [open](../vr/ska_ecg_ptb085_s0298_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb085_s0298_scale25_dt_vr.html) |
+| 085 | 56 | posterior | day 145 | ptb085_s0345 | [open](../vr/ska_ecg_ptb085_s0345_scale25_vr.html) | [open](../vr/ska_ecg_ptb085_s0345_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb085_s0345_scale25_dt_vr.html) |
+| 098 | 63 | inferior | day 0 | ptb098_s0386 | [open](../vr/ska_ecg_ptb098_s0386_scale25_vr.html) | [open](../vr/ska_ecg_ptb098_s0386_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb098_s0386_scale25_dt_vr.html) |
+| 098 | 63 | inferior | day 5 | ptb098_s0389 | [open](../vr/ska_ecg_ptb098_s0389_scale25_vr.html) | [open](../vr/ska_ecg_ptb098_s0389_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb098_s0389_scale25_dt_vr.html) |
+| 098 | 63 | inferior | day 23 | ptb098_s0398 | [open](../vr/ska_ecg_ptb098_s0398_scale25_vr.html) | [open](../vr/ska_ecg_ptb098_s0398_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb098_s0398_scale25_dt_vr.html) |
+| 098 | 63 | inferior | day 30 | ptb098_s0409 | [open](../vr/ska_ecg_ptb098_s0409_scale25_vr.html) | [open](../vr/ska_ecg_ptb098_s0409_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb098_s0409_scale25_dt_vr.html) |
+| 046 | 64 | antero-septal | day 0 | ptb046_s0156 | [open](../vr/ska_ecg_ptb046_s0156_scale25_vr.html) | [open](../vr/ska_ecg_ptb046_s0156_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb046_s0156_scale25_dt_vr.html) |
+| 046 | 64 | antero-septal | day 2 | ptb046_s0161 | [open](../vr/ska_ecg_ptb046_s0161_scale25_vr.html) | [open](../vr/ska_ecg_ptb046_s0161_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb046_s0161_scale25_dt_vr.html) |
+| 046 | 64 | antero-septal | day 12 | ptb046_s0168 | [open](../vr/ska_ecg_ptb046_s0168_scale25_vr.html) | [open](../vr/ska_ecg_ptb046_s0168_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb046_s0168_scale25_dt_vr.html) |
+| 046 | 64 | antero-septal | day 37 | ptb046_s0184 | [open](../vr/ska_ecg_ptb046_s0184_scale25_vr.html) | [open](../vr/ska_ecg_ptb046_s0184_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb046_s0184_scale25_dt_vr.html) |
+| 091 | 78 | antero-septal | day 0 | ptb091_s0353 | [open](../vr/ska_ecg_ptb091_s0353_scale25_vr.html) | [open](../vr/ska_ecg_ptb091_s0353_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb091_s0353_scale25_dt_vr.html) |
+| 091 | 78 | antero-septal | day 4 | ptb091_s0357 | [open](../vr/ska_ecg_ptb091_s0357_scale25_vr.html) | [open](../vr/ska_ecg_ptb091_s0357_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb091_s0357_scale25_dt_vr.html) |
+| 091 | 78 | antero-septal | day 11 | ptb091_s0361 | [open](../vr/ska_ecg_ptb091_s0361_scale25_vr.html) | [open](../vr/ska_ecg_ptb091_s0361_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb091_s0361_scale25_dt_vr.html) |
+| 091 | 78 | antero-septal | day 78 | ptb091_s0408 | [open](../vr/ska_ecg_ptb091_s0408_scale25_vr.html) | [open](../vr/ska_ecg_ptb091_s0408_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb091_s0408_scale25_dt_vr.html) |
 
-| when | record | cube |
-|---|---|---|
-| the day of the infarction | ptb049_s0173 | [`ska_ecg_ptb049_s0173_scale25_vr.html`](../vr/ska_ecg_ptb049_s0173_scale25_vr.html) |
-| 4 days after | ptb049_s0178 | [`ska_ecg_ptb049_s0178_scale25_vr.html`](../vr/ska_ecg_ptb049_s0178_scale25_vr.html) |
-| 11 days after | ptb049_s0186 | [`ska_ecg_ptb049_s0186_scale25_vr.html`](../vr/ska_ecg_ptb049_s0186_scale25_vr.html) |
-| 14 months after | ptb049_s0314 | [`ska_ecg_ptb049_s0314_scale25_vr.html`](../vr/ska_ecg_ptb049_s0314_scale25_vr.html) |
+## Myocardial infarction, men
+
+| patient | age | infarction | when | record | cube | missing waves tagged (×) | Δt |
+|---|---|---|---|---|---|---|---|
+| 035 | 40 | inferior | day 0 | ptb035_s0110 | [open](../vr/ska_ecg_ptb035_s0110_scale25_vr.html) | [open](../vr/ska_ecg_ptb035_s0110_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb035_s0110_scale25_dt_vr.html) |
+| 035 | 40 | inferior | day 5 | ptb035_s0119 | [open](../vr/ska_ecg_ptb035_s0119_scale25_vr.html) | [open](../vr/ska_ecg_ptb035_s0119_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb035_s0119_scale25_dt_vr.html) |
+| 035 | 40 | inferior | day 63 | ptb035_s0145 | [open](../vr/ska_ecg_ptb035_s0145_scale25_vr.html) | [open](../vr/ska_ecg_ptb035_s0145_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb035_s0145_scale25_dt_vr.html) |
+| 054 | 47 | infero-lateral | day 0 | ptb054_s0192 | [open](../vr/ska_ecg_ptb054_s0192_scale25_vr.html) | [open](../vr/ska_ecg_ptb054_s0192_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb054_s0192_scale25_dt_vr.html) |
+| 054 | 47 | infero-lateral | day 3 | ptb054_s0195 | [open](../vr/ska_ecg_ptb054_s0195_scale25_vr.html) | [open](../vr/ska_ecg_ptb054_s0195_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb054_s0195_scale25_dt_vr.html) |
+| 054 | 47 | infero-lateral | day 10 | ptb054_s0197 | [open](../vr/ska_ecg_ptb054_s0197_scale25_vr.html) | [open](../vr/ska_ecg_ptb054_s0197_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb054_s0197_scale25_dt_vr.html) |
+| 032 | 49 | antero-septal | day 0 | ptb032_s0102 | [open](../vr/ska_ecg_ptb032_s0102_scale25_vr.html) | [open](../vr/ska_ecg_ptb032_s0102_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb032_s0102_scale25_dt_vr.html) |
+| 032 | 49 | antero-septal | day 4 | ptb032_s0106 | [open](../vr/ska_ecg_ptb032_s0106_scale25_vr.html) | [open](../vr/ska_ecg_ptb032_s0106_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb032_s0106_scale25_dt_vr.html) |
+| 032 | 49 | antero-septal | day 11 | ptb032_s0115 | [open](../vr/ska_ecg_ptb032_s0115_scale25_vr.html) | [open](../vr/ska_ecg_ptb032_s0115_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb032_s0115_scale25_dt_vr.html) |
+| 032 | 49 | antero-septal | day 98 | ptb032_s0165 | [open](../vr/ska_ecg_ptb032_s0165_scale25_vr.html) | [open](../vr/ska_ecg_ptb032_s0165_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb032_s0165_scale25_dt_vr.html) |
+| 065 | 52 | infero-postero-lateral | day 0 | ptb065_s0221 | [open](../vr/ska_ecg_ptb065_s0221_scale25_vr.html) | [open](../vr/ska_ecg_ptb065_s0221_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb065_s0221_scale25_dt_vr.html) |
+| 065 | 52 | infero-postero-lateral | day 5 | ptb065_s0226 | [open](../vr/ska_ecg_ptb065_s0226_scale25_vr.html) | [open](../vr/ska_ecg_ptb065_s0226_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb065_s0226_scale25_dt_vr.html) |
+| 065 | 52 | infero-postero-lateral | day 7 | ptb065_s0229 | [open](../vr/ska_ecg_ptb065_s0229_scale25_vr.html) | [open](../vr/ska_ecg_ptb065_s0229_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb065_s0229_scale25_dt_vr.html) |
+| 065 | 52 | infero-postero-lateral | day 194 | ptb065_s0282 | [open](../vr/ska_ecg_ptb065_s0282_scale25_vr.html) | [open](../vr/ska_ecg_ptb065_s0282_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb065_s0282_scale25_dt_vr.html) |
+| 099 | 52 | antero-lateral | day 0 | ptb099_s0387 | [open](../vr/ska_ecg_ptb099_s0387_scale25_vr.html) | [open](../vr/ska_ecg_ptb099_s0387_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb099_s0387_scale25_dt_vr.html) |
+| 099 | 52 | antero-lateral | day 4 | ptb099_s0388 | [open](../vr/ska_ecg_ptb099_s0388_scale25_vr.html) | [open](../vr/ska_ecg_ptb099_s0388_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb099_s0388_scale25_dt_vr.html) |
+| 099 | 52 | antero-lateral | day 22 | ptb099_s0397 | [open](../vr/ska_ecg_ptb099_s0397_scale25_vr.html) | [open](../vr/ska_ecg_ptb099_s0397_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb099_s0397_scale25_dt_vr.html) |
+| 099 | 52 | antero-lateral | day 91 | ptb099_s0419 | [open](../vr/ska_ecg_ptb099_s0419_scale25_vr.html) | [open](../vr/ska_ecg_ptb099_s0419_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb099_s0419_scale25_dt_vr.html) |
+| 088 | 54 | inferior | day 0 | ptb088_s0339 | [open](../vr/ska_ecg_ptb088_s0339_scale25_vr.html) | [open](../vr/ska_ecg_ptb088_s0339_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb088_s0339_scale25_dt_vr.html) |
+| 088 | 54 | inferior | day 7 | ptb088_s0352 | [open](../vr/ska_ecg_ptb088_s0352_scale25_vr.html) | [open](../vr/ska_ecg_ptb088_s0352_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb088_s0352_scale25_dt_vr.html) |
+| 088 | 54 | inferior | day 92 | ptb088_s0413 | [open](../vr/ska_ecg_ptb088_s0413_scale25_vr.html) | [open](../vr/ska_ecg_ptb088_s0413_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb088_s0413_scale25_dt_vr.html) |
+| 084 | 55 | antero-septal | day 0 | ptb084_s0281 | [open](../vr/ska_ecg_ptb084_s0281_scale25_vr.html) | [open](../vr/ska_ecg_ptb084_s0281_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb084_s0281_scale25_dt_vr.html) |
+| 084 | 55 | antero-septal | day 6 | ptb084_s0288 | [open](../vr/ska_ecg_ptb084_s0288_scale25_vr.html) | [open](../vr/ska_ecg_ptb084_s0288_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb084_s0288_scale25_dt_vr.html) |
+| 084 | 55 | antero-septal | day 7 | ptb084_s0289 | [open](../vr/ska_ecg_ptb084_s0289_scale25_vr.html) | [open](../vr/ska_ecg_ptb084_s0289_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb084_s0289_scale25_dt_vr.html) |
+| 084 | 55 | antero-septal | day 127 | ptb084_s0313 | [open](../vr/ska_ecg_ptb084_s0313_scale25_vr.html) | [open](../vr/ska_ecg_ptb084_s0313_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb084_s0313_scale25_dt_vr.html) |
+| 077 | 65 | inferior | day 0 | ptb077_s0251 | [open](../vr/ska_ecg_ptb077_s0251_scale25_vr.html) | [open](../vr/ska_ecg_ptb077_s0251_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb077_s0251_scale25_dt_vr.html) |
+| 077 | 65 | inferior | day 5 | ptb077_s0254 | [open](../vr/ska_ecg_ptb077_s0254_scale25_vr.html) | [open](../vr/ska_ecg_ptb077_s0254_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb077_s0254_scale25_dt_vr.html) |
+| 077 | 65 | inferior | day 9 | ptb077_s0258 | [open](../vr/ska_ecg_ptb077_s0258_scale25_vr.html) | [open](../vr/ska_ecg_ptb077_s0258_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb077_s0258_scale25_dt_vr.html) |
+| 077 | 65 | inferior | day 43 | ptb077_s0285 | [open](../vr/ska_ecg_ptb077_s0285_scale25_vr.html) | [open](../vr/ska_ecg_ptb077_s0285_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb077_s0285_scale25_dt_vr.html) |
+| 082 | 65 | antero-septal | day 0 | ptb082_s0267 | [open](../vr/ska_ecg_ptb082_s0267_scale25_vr.html) | [open](../vr/ska_ecg_ptb082_s0267_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb082_s0267_scale25_dt_vr.html) |
+| 082 | 65 | antero-septal | day 3 | ptb082_s0271 | [open](../vr/ska_ecg_ptb082_s0271_scale25_vr.html) | [open](../vr/ska_ecg_ptb082_s0271_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb082_s0271_scale25_dt_vr.html) |
+| 082 | 65 | antero-septal | day 8 | ptb082_s0279 | [open](../vr/ska_ecg_ptb082_s0279_scale25_vr.html) | [open](../vr/ska_ecg_ptb082_s0279_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb082_s0279_scale25_dt_vr.html) |
+| 082 | 65 | antero-septal | day 142 | ptb082_s0320 | [open](../vr/ska_ecg_ptb082_s0320_scale25_vr.html) | [open](../vr/ska_ecg_ptb082_s0320_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb082_s0320_scale25_dt_vr.html) |
+| 078 | 68 | inferior | day 0 | ptb078_s0255 | [open](../vr/ska_ecg_ptb078_s0255_scale25_vr.html) | [open](../vr/ska_ecg_ptb078_s0255_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb078_s0255_scale25_dt_vr.html) |
+| 078 | 68 | inferior | day 2 | ptb078_s0259 | [open](../vr/ska_ecg_ptb078_s0259_scale25_vr.html) | [open](../vr/ska_ecg_ptb078_s0259_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb078_s0259_scale25_dt_vr.html) |
+| 078 | 68 | inferior | day 9 | ptb078_s0262 | [open](../vr/ska_ecg_ptb078_s0262_scale25_vr.html) | [open](../vr/ska_ecg_ptb078_s0262_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb078_s0262_scale25_dt_vr.html) |
+| 078 | 68 | inferior | day 167 | ptb078_s0317 | [open](../vr/ska_ecg_ptb078_s0317_scale25_vr.html) | [open](../vr/ska_ecg_ptb078_s0317_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb078_s0317_scale25_dt_vr.html) |
+| 097 | 68 | anterior | day 0 | ptb097_s0380 | [open](../vr/ska_ecg_ptb097_s0380_scale25_vr.html) | [open](../vr/ska_ecg_ptb097_s0380_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb097_s0380_scale25_dt_vr.html) |
+| 097 | 68 | anterior | day 3 | ptb097_s0382 | [open](../vr/ska_ecg_ptb097_s0382_scale25_vr.html) | [open](../vr/ska_ecg_ptb097_s0382_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb097_s0382_scale25_dt_vr.html) |
+| 097 | 68 | anterior | day 10 | ptb097_s0384 | [open](../vr/ska_ecg_ptb097_s0384_scale25_vr.html) | [open](../vr/ska_ecg_ptb097_s0384_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb097_s0384_scale25_dt_vr.html) |
+| 097 | 68 | anterior | day 34 | ptb097_s0394 | [open](../vr/ska_ecg_ptb097_s0394_scale25_vr.html) | [open](../vr/ska_ecg_ptb097_s0394_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb097_s0394_scale25_dt_vr.html) |
+| 023 | 69 | inferior | day 0 | ptb023_s0080 | [open](../vr/ska_ecg_ptb023_s0080_scale25_vr.html) | [open](../vr/ska_ecg_ptb023_s0080_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb023_s0080_scale25_dt_vr.html) |
+| 023 | 69 | inferior | day 2 | ptb023_s0081 | [open](../vr/ska_ecg_ptb023_s0081_scale25_vr.html) | [open](../vr/ska_ecg_ptb023_s0081_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb023_s0081_scale25_dt_vr.html) |
+| 023 | 69 | inferior | day 11 | ptb023_s0085 | [open](../vr/ska_ecg_ptb023_s0085_scale25_vr.html) | [open](../vr/ska_ecg_ptb023_s0085_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb023_s0085_scale25_dt_vr.html) |
+| 023 | 69 | inferior | day 31 | ptb023_s0103 | [open](../vr/ska_ecg_ptb023_s0103_scale25_vr.html) | [open](../vr/ska_ecg_ptb023_s0103_scale25_tagged_vr.html) | [open](../vr/ska_ecg_ptb023_s0103_scale25_dt_vr.html) |
 
 ## Files
 
 ```
-build_ecg_vr.py              fills the cube template with one run (record, scale)
-ska_ecg_vr_template.html     the cube (Three.js), placeholders __DATA__ and __DESCRIPTION__
+build_ecg_vr.py                     fills a cube template with one run (record, scale)
+ska_ecg_vr_template.html            the cube (Three.js), placeholders __DATA__ and __DESCRIPTION__
+ska_ecg_vr_template_tagged.html     the same, steps into or out of a missing wave drawn as ×
+ska_ecg_vr_template_dt.html         the same, vertical axis Δt (ms) instead of P
 results/
 └── <record>/
     └── ska_<record>_runs.csv    one row per step
@@ -47,6 +119,8 @@ The cubes are in [`../vr/`](../vr/). To rebuild one:
 
 ```bash
 python build_ecg_vr.py ska_ecg_vr_template.html results/ptb185/ska_ptb185_runs.csv 25 "female, 22, Healthy control" ../vr/ska_ecg_ptb185_scale25_vr.html
+python build_ecg_vr.py ska_ecg_vr_template_tagged.html results/ptb185/ska_ptb185_runs.csv 25 "female, 22, Healthy control" ../vr/ska_ecg_ptb185_scale25_tagged_vr.html tagged
+python build_ecg_vr.py ska_ecg_vr_template_dt.html results/ptb185/ska_ptb185_runs.csv 25 "female, 22, Healthy control" ../vr/ska_ecg_ptb185_scale25_dt_vr.html dt
 ```
 
 ## Data — `results/<record>/ska_<record>_runs.csv`

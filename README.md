@@ -11,7 +11,6 @@ This project applies the SKA real-time learner to pathological hearts, from the 
 The method is the one of
 [SKA-ECG-Heart-Rate-Variability](https://github.com/quantiota/SKA-ECG-Heart-Rate-Variability):
 the five waves of each heartbeat, the same input, the same learner, the same 3D cube.
-Nothing is changed for pathology.
 
 ## A missing event
 
@@ -38,7 +37,6 @@ new band in the learner's space.
 | for | healthy hearts | pathological hearts |
 
 
-
 ## Cases
 
 Lead II, 1000 Hz, the whole record (about 2 minutes), scale 25.
@@ -53,14 +51,36 @@ Lead II, 1000 Hz, the whole record (about 2 minutes), scale 25.
 | ptb105 | patient105/s0303lre | 32 |
 | ptb279 | patient279/s0534_re | 35 |
 
-**Myocardial infarction**, one woman aged 42 (acute inferior infarction), four records:
+**Myocardial infarction**: patients with their first ECG on the day of the infarction (day 0),
+and the following ECGs. Records `ptb<patient>_<PTB record>`, e.g. `ptb049_s0173`.
 
-| record | PTB record | when |
-|---|---|---|
-| ptb049_s0173 | patient049/s0173lre | the day of the infarction |
-| ptb049_s0178 | patient049/s0178lre | 4 days after |
-| ptb049_s0186 | patient049/s0186lre | 11 days after |
-| ptb049_s0314 | patient049/s0314lre | 14 months after |
+Women:
+
+| patient | age | infarction | PTB records | days after the infarction |
+|---|---|---|---|---|
+| 049 | 42 | inferior | s0173, s0178, s0186, s0314 | 0, 4, 11, 444 |
+| 051 | 55 | antero-septal | s0179, s0181, s0187, s0213 | 0, 4, 10, 112 |
+| 085 | 56 | posterior | s0296, s0297, s0298, s0345 | 0, 5, 11, 145 |
+| 098 | 63 | inferior | s0386, s0389, s0398, s0409 | 0, 5, 23, 30 |
+| 046 | 64 | antero-septal | s0156, s0161, s0168, s0184 | 0, 2, 12, 37 |
+| 091 | 78 | antero-septal | s0353, s0357, s0361, s0408 | 0, 4, 11, 78 |
+
+Men:
+
+| patient | age | infarction | PTB records | days after the infarction |
+|---|---|---|---|---|
+| 035 | 40 | inferior | s0110, s0119, s0145 | 0, 5, 63 |
+| 054 | 47 | infero-lateral | s0192, s0195, s0197 | 0, 3, 10 |
+| 032 | 49 | antero-septal | s0102, s0106, s0115, s0165 | 0, 4, 11, 98 |
+| 065 | 52 | infero-postero-lateral | s0221, s0226, s0229, s0282 | 0, 5, 7, 194 |
+| 099 | 52 | antero-lateral | s0387, s0388, s0397, s0419 | 0, 4, 22, 91 |
+| 088 | 54 | inferior | s0339, s0352, s0413 | 0, 7, 92 |
+| 084 | 55 | antero-septal | s0281, s0288, s0289, s0313 | 0, 6, 7, 127 |
+| 077 | 65 | inferior | s0251, s0254, s0258, s0285 | 0, 5, 9, 43 |
+| 082 | 65 | antero-septal | s0267, s0271, s0279, s0320 | 0, 3, 8, 142 |
+| 078 | 68 | inferior | s0255, s0259, s0262, s0317 | 0, 2, 9, 167 |
+| 097 | 68 | anterior | s0380, s0382, s0384, s0394 | 0, 3, 10, 34 |
+| 023 | 69 | inferior | s0080, s0081, s0085, s0103 | 0, 2, 11, 31 |
 
 
 ## Repository

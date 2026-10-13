@@ -7,6 +7,11 @@ The template (ska_ecg_vr_template.html) holds two placeholders:
 
 Usage
     python build_ecg_vr.py ska_ecg_vr_template.html ska_<record>_runs.csv <scale> "<patient>" out.html
+    python build_ecg_vr.py ska_ecg_vr_template_tagged.html ska_<record>_runs.csv <scale> "<patient>" out.html tagged
+    python build_ecg_vr.py ska_ecg_vr_template_dt.html ska_<record>_runs.csv <scale> "<patient>" out.html dt
+
+With "tagged", a step that goes into or out of a missing wave (value_cos = value_sin = 0) is
+marked (D.m = 1); the tagged template draws it as a cross, in its transition colour.
     python build_ecg_vr.py ska_ecg_vr_template.html ska_ptb177_runs.csv 25 "female, 35, dysrhythmia" ska_ecg_ptb177_scale25_vr.html
 Requires: numpy, pandas
 """
@@ -21,8 +26,12 @@ COLORS = ["#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#3987e5"]
 
 def main():
     tpl, csv, scale, patient, out = sys.argv[1], sys.argv[2], float(sys.argv[3]), sys.argv[4], sys.argv[5]
+    tagged = len(sys.argv) > 6 and sys.argv[6] == "tagged"
+    dt = len(sys.argv) > 6 and sys.argv[6] == "dt"                    # vertical axis = delta_t (ms), not P
     d = pd.read_csv(csv, dtype={"record_id": str})
-    d = d[(d.input == "cdot_cos") & (d.scale == scale)].sort_values("event_index")
+    d = d[(d.input == "cdot_cos") & (d.scale == scale)].sort_values("event_index").reset_index(drop=True)
+    missing = (d.value_cos == 0) & (d.value_sin == 0)                  # the wave of this step is missing
+    d["m"] = (missing | missing.shift(fill_value=False)).astype(int)   # into it, or out of it
     d = d.dropna(subset=["P", "zdot"]).reset_index(drop=True)
     if d.empty:
         raise SystemExit(f"no rows for input=cdot_cos scale={scale:g}")
@@ -31,10 +40,16 @@ def main():
     D = dict(z=d.knowledge.round(2).tolist(), zd=d.zdot.round(3).tolist(), p=d.P.round(4).tolist(),
              t=[NAMES.index(t) for t in tr], names=NAMES, colors=COLORS,
              zmax=float(d.knowledge.max()), zdmax=float(d.zdot.max()))
+    if tagged:
+        D["m"] = d.m.tolist()
+    if dt:
+        D["p"] = (1000 * d.delta_t).round(1).tolist()
+        D["ymax"] = float(1000 * d.delta_t.max())
     desc = (f"Record {rec}, PhysioNet PTB Diagnostic ECG Database ({patient}, lead II, 1000 Hz), "
             f"{d.k.nunique()} beats = {len(d):,} steps of SKA real-time learning. "
             f"Input: Re ċ (cosine), scale {scale:g}. Horizontal axes: z = ‖Z‖ and ż = dz/dt (1/s); "
-            "vertical axis: P = exp(−|ΔH/H|). 5 colours = the five transitions of the heartbeat.")
+            + ("vertical axis: Δt, the time since the previous wave (ms). " if dt else "vertical axis: P = exp(−|ΔH/H|). ")
+            + "5 colours = the five transitions of the heartbeat.")
     s = open(tpl, encoding="utf-8").read()
     if "__DATA__" not in s or "__DESCRIPTION__" not in s:
         raise SystemExit("template is missing __DATA__ or __DESCRIPTION__")
