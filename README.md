@@ -13,6 +13,29 @@ The method is the one of
 the five waves of each heartbeat, the same input, the same learner, the same 3D cube.
 Nothing is changed for pathology.
 
+## A missing event
+
+**First prototype (the results here).** Every beat sends its five events to the learner. A wave
+that is not found in a beat (`present` = False) is still sent, with c = 0. If S is missing,
+the learner reads ċ = 0 − c_R for "R→S" and ċ = c_T − 0 for "S→T": the two transitions keep
+their names, but each one now joins a wave and nothing. In the learner's space their steps
+form their own band, apart from the normal R→S and S→T. On a healthy heart, where the
+waves are almost always present, the first prototype reads the beat as it is.
+
+**Second prototype (next step).** A missing wave is removed from the stream. If S is
+missing, the beat is P → Q → R → T → P, four events, and the transition is **R→T**:
+
+**ċ = c_T − c_R**
+
+Each transition then joins two waves that exist, and a new transition (R→T, P→R, …) is a
+new band in the learner's space.
+
+| | first prototype | second prototype |
+|---|---|---|
+| missing wave | sent, c = 0 | removed from the stream |
+| beat with S missing | P→Q, Q→R, R→S, S→T, T→P | P→Q, Q→R, **R→T**, T→P |
+| for | healthy hearts | pathological hearts |
+
 
 ## Cases
 
