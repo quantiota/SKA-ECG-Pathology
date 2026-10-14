@@ -9,6 +9,7 @@ Usage
     python build_ecg_vr.py ska_ecg_vr_template.html ska_<record>_runs.csv <scale> "<patient>" out.html
     python build_ecg_vr.py ska_ecg_vr_template_tagged.html ska_<record>_runs.csv <scale> "<patient>" out.html tagged
     python build_ecg_vr.py ska_ecg_vr_template_dt.html ska_<record>_runs.csv <scale> "<patient>" out.html dt
+    python build_ecg_vr.py ska_ecg_vr_template_label.html ska_<record>_runs.csv <scale> "<patient>" out.html label
 
 With "tagged", a step that goes into or out of a missing wave (value_cos = value_sin = 0) is
 marked (D.m = 1); the tagged template draws it as a cross, in its transition colour.
@@ -26,7 +27,8 @@ COLORS = ["#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#3987e5"]
 
 def main():
     tpl, csv, scale, patient, out = sys.argv[1], sys.argv[2], float(sys.argv[3]), sys.argv[4], sys.argv[5]
-    tagged = len(sys.argv) > 6 and sys.argv[6] == "tagged"
+    label = len(sys.argv) > 6 and sys.argv[6] == "label"              # tagged + a label on click
+    tagged = len(sys.argv) > 6 and sys.argv[6] in ("tagged", "label")
     dt = len(sys.argv) > 6 and sys.argv[6] == "dt"                    # vertical axis = delta_t (ms), not P
     d = pd.read_csv(csv, dtype={"record_id": str})
     d = d[(d.input == "cdot_cos") & (d.scale == scale)].sort_values("event_index").reset_index(drop=True)
@@ -42,6 +44,10 @@ def main():
              zmax=float(d.knowledge.max()), zdmax=float(d.zdot.max()))
     if tagged:
         D["m"] = d.m.tolist()
+    if label:
+        D.update(k=d.k.astype(int).tolist(), n=d.event_index.astype(int).tolist(),
+                 tm=(d.peak / 1000).round(3).tolist(), x=d.x_input.round(4).tolist(),
+                 dt=(1000 * d.delta_t).round(1).tolist())
     if dt:
         D["p"] = (1000 * d.delta_t).round(1).tolist()
         D["ymax"] = float(1000 * d.delta_t.max())
