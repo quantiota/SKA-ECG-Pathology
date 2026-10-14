@@ -117,6 +117,8 @@ build_ecg_vr.py                     fills a cube template with one run (record, 
 ska_ecg_vr_template.html            the cube (Three.js), placeholders __DATA__ and __DESCRIPTION__
 ska_ecg_vr_template_tagged.html     the same, steps into or out of a missing wave drawn as ×
 ska_ecg_vr_template_dt.html         the same, vertical axis Δt (ms) instead of P
+make_timing.py                      the time (Δt) and beat of every point of a cube, from its run
+add_replay.py                       adds a real-time replay (play / pause / speed / position) to a cube
 results/
 └── <record>/
     └── ska_<record>_runs.csv    one row per step
@@ -128,6 +130,13 @@ The cubes are in [`../vr/`](../vr/). To rebuild one:
 python build_ecg_vr.py ska_ecg_vr_template.html results/ptb185/ska_ptb185_runs.csv 25 "female, 22, Healthy control" ../vr/ska_ecg_ptb185_scale25_vr.html
 python build_ecg_vr.py ska_ecg_vr_template_tagged.html results/ptb185/ska_ptb185_runs.csv 25 "female, 22, Healthy control" ../vr/ska_ecg_ptb185_scale25_tagged_vr.html tagged
 python build_ecg_vr.py ska_ecg_vr_template_dt.html results/ptb185/ska_ptb185_runs.csv 25 "female, 22, Healthy control" ../vr/ska_ecg_ptb185_scale25_dt_vr.html dt
+```
+
+To add the replay to a cube (on a tagged cube, each missing wave is ringed in its band's colour as it appears):
+
+```bash
+python make_timing.py ../vr/ska_ecg_ptb091_s0353_scale25_tagged_vr.html results/ptb091_s0353/ska_ptb091_s0353_runs.csv ptb091_s0353 25 timing.json
+python add_replay.py ../vr/ska_ecg_ptb091_s0353_scale25_tagged_vr.html timing.json ../vr/ska_ecg_ptb091_s0353_scale25_tagged_vr_replay.html
 ```
 
 ## Data — `results/<record>/ska_<record>_runs.csv`
