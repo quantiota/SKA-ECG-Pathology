@@ -74,3 +74,10 @@ patient023/s0080lre   ptb023_s0080
 patient023/s0081lre   ptb023_s0081
 patient023/s0085lre   ptb023_s0085
 patient023/s0103lre   ptb023_s0103
+patient086/s0316lre   ptb086_s0316
+patient087/s0321lre   ptb087_s0321
+patient087/s0326lre   ptb087_s0326
+patient087/s0330lre   ptb087_s0330
+patient100/s0399lre   ptb100_s0399
+patient100/s0401lre   ptb100_s0401
+patient100/s0407lre   ptb100_s0407
