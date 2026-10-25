@@ -8,7 +8,7 @@ navigates the bands with a headset; the assistant measures what the selected bea
 
 ## Cubes
 
-PhysioNet PTB Diagnostic ECG Database, lead II, 1000 Hz, scale 25. Four cubes per record: the cube (P), the same with the steps into or out of a missing wave tagged (×), the cube with Δt, the time since the previous wave, as the vertical axis, and the cube with H, the entropy, as the vertical axis. The last column opens P, Δt and H side by side, for a wide display. Open a cube and press **Enter VR** in the headset browser.
+PhysioNet PTB Diagnostic ECG Database, lead II, 1000 Hz, scale 25, the whole record (about 2 minutes). The record is not sufficient for entropy saturation. Four cubes per record: the cube (P), the same with the steps into or out of a missing wave tagged (×), the cube with Δt, the time since the previous wave, as the vertical axis, and the cube with H, the entropy, as the vertical axis. The last column opens P, Δt and H side by side, for a wide display. Open a cube and press **Enter VR** in the headset browser.
 
 ### Healthy controls
 

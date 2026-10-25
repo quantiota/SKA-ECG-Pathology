@@ -9,7 +9,7 @@ unchanged.
 
 The records come from the PhysioNet
 [PTB Diagnostic ECG Database](https://physionet.org/content/ptbdb/1.0.0/), lead II, 1000 Hz,
-the whole record (about 2 minutes). Cosine input, scale 25. One run per record: all its steps,
+the whole record (about 2 minutes); the record is not sufficient for entropy saturation. Cosine input, scale 25. One run per record: all its steps,
 five per cycle. Four cubes per record: the cube (P), the same with the steps
 into or out of a missing wave tagged (×), the cube with Δt, the time since the previous
 wave, as the vertical axis, and the cube with H, the entropy, as the vertical axis. The last

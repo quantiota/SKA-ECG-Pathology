@@ -39,7 +39,7 @@ new band in the learner's space.
 
 ## Cases
 
-Lead II, 1000 Hz, the whole record (about 2 minutes), scale 25.
+Lead II, 1000 Hz, the whole record (about 2 minutes), scale 25. The record is not sufficient for entropy saturation.
 
 **Healthy controls**, the reference:
 
