@@ -164,6 +164,6 @@ The same columns as in SKA-ECG-Heart-Rate-Variability, stored in QuestDB in `ecg
 | `decision`, `decision_norm` | the learner's last decision D and ‖D‖ |
 | `entropy` | H |
 | `delta_t` | time since the previous wave (s) |
-| `cosine_similarity`, `delta_h_over_delta_d`, `frobenius_norm`, `matrix_size` | learner diagnostics |
+| `cosine_similarity`, `delta_h_over_delta_d`, `frobenius_norm` | learner diagnostics |
 | `P`, `zdot`, `zdot_back` | **computed at export**: P = exp(−\|ΔH/H\|) from `entropy`; ż from `knowledge` and `delta_t`, central (`zdot`) and backward (`zdot_back`) difference |
 | `timestamp` | the wave's time in the recording |
